@@ -17,10 +17,125 @@ h1, h2, h3 {
 	margin: 0;
 }
 
-blockquote {
-	font-family: 'Kaushan Script', cursive;
+h1 {
+	font-size: 80px;
+	color: var(--zelena);
+	margin-bottom: 80px;
 }
 
+h2 {
+	font-size: 50px;
+	color: var(--zelena);
+	grid-column: 2 / 3;
+}
+
+header p {
+	color: var(--seda);
+}
+blockquote {
+	font-family: 'Kaushan Script', cursive;
+	grid-column: span 3;
+	text-align: center;
+	font-size: 30px;
+	color: var(--tmava);
+	margin: 0;
+	}
+
+blockquote::after {
+	content: "";
+	display: block;
+	width: 10%;
+	height: 3px;
+	background-color: var(--limetka);
+	margin: 20px auto;
+}
+
+blockquote::before{
+	content: "";
+	display: block;
+	width: 10%;
+	height: 3px;
+	background-color: var(--limetka);
+	margin: 20px auto;
+	}
+
+.blog {
+	display: grid;
+	grid-template-columns: 1fr 4fr 2fr;
+	gap: 40px;
+}
+
+p {
+	grid-column: 2;
+	margin: 0;
+}
+
+header {grid-column: 2;}
+
+figure {
+	grid-column: 1 / -1;
+	margin: 0;
+}
+
+figure img {
+	width: 100%;
+}
+
+
+
+.tip-vlevo {
+	grid-column: 1;
+	text-align: right;
+	}
+
+.tip-vlevo img {
+			width: 100%;
+			}
+
+.tip {
+	background-color: var(--seda);
+	padding: 20px;
+	align-self: baseline;
+	font-size: 15px;
+	color: var(--tmava);
+	position: relative;
+	}
+
+.tip a {
+	color: #ee5a24;
+}
+
+.tip-vlevo::after {
+	content: "";
+	background-color: var(--zluta);
+	width: 3px;
+	height: 100%;
+	bottom: 0;
+	position: absolute;
+	right: 0px;
+	}
+
+.tip-vpravo::before {
+	content: "";
+	background-color: var(--zluta);
+	width: 3px;
+	height: 100%;
+	bottom: 0;
+	position: absolute;
+	left: 0px;
+}
+
+figcaption {color: var(--seda);}
+
+
+footer {
+	grid-column: 2 / 3;
+	color: var(--seda);
+}
+
+footer a {
+	color: var(--seda);
+}
 /* --------------------------------------------------- */
 
 /* barvy */
